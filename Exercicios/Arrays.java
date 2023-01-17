@@ -1,3 +1,9 @@
+/* 
+  Objetivo: Crie um programa em java que salve dados em uma array depois leia e imprima os dados da arrya.
+  Entrada: Notas.
+  Saida: Mensagem de Texto, lista de notas.
+  Autor: Rafael Florentino.
+*/
 import java.util.Scanner;
 
 public class Arrays {

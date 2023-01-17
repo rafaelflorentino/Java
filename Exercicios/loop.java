@@ -1,3 +1,9 @@
+/* 
+  Objetivo: Crie um programa em java faça um loop com While, DoWhile e For
+  Entrada: Numeros.
+  Saida: Mensagem de Texto, e os números.
+  Autor: Rafael Florentino.
+*/
 import java.util.Scanner;
 
 public class loop {
