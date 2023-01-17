@@ -1,7 +1,13 @@
+/* 
+  Objetivo: Crie um programa em java que verifique se: (a média >= 6, e as faltas <= 5 para aprovado), (média >=4 recuperação) (média<4 ou faltas >5 reprovado) 
+  Entrada: Sem entrada.
+  Saida: Média, mensagem de aprovado ou reprovado.
+  Autor: Rafael Florentino.
+*/
 public class IfElse {
     public static void main(String[] args) {
-        int nota = 99;
-        int media = 60;
+        int nota = 9;
+        int media = 6;
         int maxFaltas= 5;
         int faltas= 10;
         String resultado;
@@ -10,7 +16,7 @@ public class IfElse {
         // Else If 
         if(nota >= media && faltas<= maxFaltas){ // AND && 
             System.out.println("\nAprovado!!!");
-        }else if(nota >= 40){
+        }else if(nota >= 4){
             System.out.println("\nRecuperação...");
         }else{
             System.out.println("\nReprovado.");

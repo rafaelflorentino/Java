@@ -1,3 +1,9 @@
+/* 
+  Objetivo: Crie um programa em java que verifique a posição do pódio, e imprima na tela uma mensagem. 
+  Entrada: Sem entrada.
+  Saida: Colocação no pódio.
+  Autor: Rafael Florentino.
+*/
 public class Switch {
     public static void main(String[] args) {
         int posicao = 7;

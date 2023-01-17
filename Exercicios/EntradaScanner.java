@@ -1,3 +1,9 @@
+/* 
+  Objetivo: Crie um programa em java que calcule a média das 3 notas e diga se o aluno foi aprovado ou não média >=6.
+  Entrada: Nome, e as3 notas.
+  Saida: Nome, média, e mensagem de aprovado ou reprovado.
+  Autor: Rafael Florentino.
+*/
 import java.util.Scanner;
 
 public class EntradaScanner {
