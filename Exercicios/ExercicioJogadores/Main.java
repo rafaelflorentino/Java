@@ -1,7 +1,7 @@
 /* 
-  Objetivo: Crie um programa em java que crie uma classe jogador, istancie
-  Entrada: 
-  Saida: 
+  Objetivo: Crie um programa em java que crie uma classe jogador, istancie, adicione e remova vidas;
+  Entrada: Sem entrada.
+  Saida: Dados Jogadores.
   Autor: Rafael Florentino.
 */
 package ExercicioJogadores;
@@ -12,7 +12,6 @@ public class Main{
 
         //Objeto static(alerta em jogador) consigo acessar sem precisar instanciar um novo jogador.
         System.out.printf("\nAlerta: %s\n",Jogador.alerta ? "Sim" : "Não");
-
 
         // Tipo: Jogador; Nome: jogador1; Valor: new Jogador();
         Jogador jogador1 = new Jogador(numero++); /* new instancia um objeto do tipo jogador(classe) e cria um novo jogador
