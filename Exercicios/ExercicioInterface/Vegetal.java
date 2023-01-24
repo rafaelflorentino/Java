@@ -1,6 +1,6 @@
 package ExercicioInterface;
 
-public class Vegetal {
+public class Vegetal{
     private Boolean vivo;
     private int massa;
 
@@ -21,10 +21,10 @@ public class Vegetal {
     }
 
     public void info(){
-        System.out.printf("Tipo..:%s%n",getClass().toString());
-        System.out.printf("Vivo..:%s%n",this.getVivo() ? "Sim" : "Nao");
-        System.out.printf("Massa.:%s%n",this.massa);
         System.out.println("--------------------------");
-    };
-    
+        System.out.printf("Tipo..: %s%n",getClass().toString());
+        System.out.printf("Vivo..: %s%n",this.getVivo() ? "Sim" : "Nao");
+        System.out.printf("Massa.: %s%n",this.massa);
+        System.out.println("--------------------------");
+    }; 
 }

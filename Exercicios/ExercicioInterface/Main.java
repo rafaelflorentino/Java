@@ -5,9 +5,18 @@ public class Main {
         AnimalA n1=new AnimalA();
         n1.info();
 
-        //AnimalA n2=new AnimalA();// Classe abstrata nao pode ser intanciada só pode ser herdada
-        Formiga a1 = new Formiga(); // Herda metodos de Animal2(clase estatica)
-        
-    }
-    
+        Formiga f1= new Formiga(2, 2, 2);
+        f1.info();
+
+        Sapo s1 = new Sapo(10, 10, 10);
+        s1.info();
+
+        Aranha a1 = new Aranha(5, 5, 5, 3);
+        a1.info();
+
+        Vegetal v1 = new Vegetal(1);
+        v1.info();
+ 
+        //Animal n2=new Animal();// Classe abstrata nao pode ser intanciada só pode ser herdada 
+    } 
 }

@@ -73,11 +73,12 @@ abstract class Animal implements SerVivo{ // Classe abstrata não pode ser insta
           }
     };
     public void info(){
-        System.out.printf("Tipo..:%s%n",getClass().toString());
-        System.out.printf("Vivo..:%s%n",this.getVivo() ? "Sim" : "Nao");
-        System.out.printf("Massa.:%s%n",this.massa);
-        System.out.printf("Vel...:%s%n",this.vel);
-        System.out.printf("Forca.:%s%n",this.forca);
+        System.out.println("--------------------------");
+        System.out.printf("Tipo..: %s%n",getClass().toString());
+        System.out.printf("Vivo..: %s%n",this.getVivo() ? "Sim" : "Nao");
+        System.out.printf("Massa.: %s%n",this.massa);
+        System.out.printf("Vel...: %s%n",this.vel);
+        System.out.printf("Forca.: %s%n",this.forca);
         System.out.println("--------------------------");
     };
 }
