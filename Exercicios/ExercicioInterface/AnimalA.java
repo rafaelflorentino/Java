@@ -6,7 +6,6 @@ public class AnimalA implements SerVivo{
     public void mover(){}
     public void comer(int massa){}
     public void info(){
-        //System.out.printf("%s", this.vivo ? "Sim" : "Nao");// busca vivo em uma interface
         System.out.println("--------------------------");
         System.out.println("--------------------------");
         System.out.printf("Tipo..: %s%n",getClass().toString());

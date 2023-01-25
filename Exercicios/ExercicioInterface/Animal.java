@@ -33,7 +33,11 @@ abstract class Animal implements SerVivo{ // Classe abstrata não pode ser insta
     }
 
     public void setMassa(int massa){
-        this.massa=massa;
+        if(this.massa <= 0){
+            this.massa=massa;
+        }else{
+            this.massa+=massa;
+        }  
     }
     public int getMassa(){
         return this.massa;
@@ -41,14 +45,14 @@ abstract class Animal implements SerVivo{ // Classe abstrata não pode ser insta
     public void atacar(Animal a){
       if(this.vivo){
             if(this.forca > a.forca){
-                this.forca+=a.getMassa();
-                a.vivo=false;
+                //this.forca+=a.getMassa();
+                a.vivo=true;
             }else{
                 this.vivo=false;
             }
       }else{
         System.out.println("--------------------------");
-        System.out.println(this.getClass().toGenericString() + " Esta morto nao pode atacar");
+        System.out.println("\n"+this.getClass().toGenericString() + " Esta morto(a) nao pode atacar");
         System.out.println("--------------------------");
       }
     };
@@ -58,7 +62,7 @@ abstract class Animal implements SerVivo{ // Classe abstrata não pode ser insta
             this.y+=this.vel;
         }else{
             System.out.println("--------------------------");
-            System.out.println(this.getClass().toGenericString() + " Esta morto nao pode Mover");
+            System.out.println("\n"+this.getClass().toGenericString() + " Esta morto(a) nao pode Mover");
             System.out.println("--------------------------");
           }
         
@@ -66,9 +70,24 @@ abstract class Animal implements SerVivo{ // Classe abstrata não pode ser insta
     public void comer(int massa){
         if(this.vivo){
             this.forca+=massa;
+            this.setMassa(massa);
+            //setMassa(massa);
+            
         }else{
             System.out.println("--------------------------");
-            System.out.println(this.getClass().toGenericString() + " Esta morto nao pode Comer");
+            System.out.println("\n"+this.getClass().toGenericString() + " Esta morto(a) nao pode Comer");
+            System.out.println("--------------------------");
+          }
+    };
+    public void comer(Vegetal v1){
+        if(this.vivo){
+            this.forca+=v1.getMassa();
+            this.massa+=v1.getMassa();
+            System.out.println("\n Massa do vejetal: "+v1.getMassa());
+            v1.setVivo(false);
+        }else{
+            System.out.println("--------------------------");
+            System.out.println("\n"+this.getClass().toGenericString() + " Esta morto(a) nao pode Comer");
             System.out.println("--------------------------");
           }
     };

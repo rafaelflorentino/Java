@@ -13,27 +13,22 @@ public class Aranha extends Animal{
         System.out.printf("Massa.: %s%n",this.getMassa());
         System.out.printf("Veneno.: %d%n",this.veneno);
         System.out.printf("Forca.: %s%n",this.getForca());
-        //System.out.printf("Vel.: %d%n",vel);
-
         System.out.println("--------------------------");
     }; 
 
-    /*@Override 
+    @Override 
     public void atacar(Animal a){ // Override sobrescre a classe atacar de animal, pela atacar de aranha
-        if(this.getVivo){
-            if(this.getForca <= a.getForca){
-                this.setForca+=a.getMassa();
-            } 
-            if((this.getForca + this.veneno) > a.getForca){
-                this.setForca(this.getForca()+a.getMassa());
-                a.setVivo(false);
-            }else{
+        if(this.getVivo()){
+            if((this.getForca() + this.veneno) <= a.getForca()){
                 this.setVivo(false);
+            } 
+            if((this.getForca() + this.veneno) > a.getForca()){
+                a.setVivo(false);
             }
         }else{
           System.out.println("--------------------------");
-          System.out.println("Este Animal esta morto");
+          System.out.println("\nEste Animal esta morto");
           System.out.println("--------------------------");
         }
-      }*/
+      }
 }

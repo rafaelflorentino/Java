@@ -23,7 +23,7 @@ public class Vegetal{
     public void info(){
         System.out.println("--------------------------");
         System.out.printf("Tipo..: %s%n",getClass().toString());
-        System.out.printf("Vivo..: %s%n",this.getVivo() ? "Sim" : "Nao");
+        System.out.printf("Vivo..: %s%n",this.vivo? "Sim" : "Nao");
         System.out.printf("Massa.: %s%n",this.massa);
         System.out.println("--------------------------");
     }; 
