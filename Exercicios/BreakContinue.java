@@ -4,7 +4,7 @@
   Saida: Números de 1 a 100.
   Autor: Rafael Florentino.
 */
-public class BreakContinues {
+public class BreakContinue {
     public static void main(String[] args) {
         int cont=100;
         for(int i=0;i<cont;i++){
@@ -21,6 +21,5 @@ public class BreakContinues {
             }
             System.out.printf("%d -",i);// de 10 a 60 o codigo não vai chegar aqui, so antes de 10 e depois de 60
         }
-    
     }
 }
