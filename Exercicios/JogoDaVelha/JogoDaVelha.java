@@ -9,6 +9,8 @@ public class JogoDaVelha {
         String vitoria="";
         Scanner scan= new Scanner(System.in);
 
+        iniciarJogo(velha);
+
         while(game){
             desenhaJogo(velha);
             vitoria=verificaVitoria(velha);
@@ -33,11 +35,11 @@ public class JogoDaVelha {
     }
     public static void desenhaJogo(Campos[][] velha){
         limparTela();
-        System.out.println("         0   1    2");
+        System.out.println("    0   1    2");
         System.out.printf("0   %c | %c | %c %n",velha[0][0].getSimbolo(),velha[0][1].getSimbolo(),velha[0][2].getSimbolo());
-        System.out.println("      ---------------");        
+        System.out.println(" ---------------");        
         System.out.printf("1   %c | %c | %c %n",velha[1][0].getSimbolo(),velha[1][1].getSimbolo(),velha[1][2].getSimbolo());
-        System.out.println("      ---------------");         
+        System.out.println("  ---------------");         
         System.out.printf("2   %c | %c | %c %n",velha[2][0].getSimbolo(),velha[2][1].getSimbolo(),velha[2][2].getSimbolo());   
     }
     public static void limparTela(){
@@ -62,6 +64,13 @@ public class JogoDaVelha {
             return true;
         }else{
             return false;
+        }
+    }
+    public static void iniciarJogo(Campos[][] velha){
+        for(int l=0;l<3;l++){
+            for(int c=0;c<3;c++){
+                velha[l][c]=new Campos();
+            }
         }
     }
 
