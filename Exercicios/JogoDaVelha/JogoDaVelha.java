@@ -1,3 +1,9 @@
+/* 
+  Objetivo: Crie um programa em java que simule um jogo da velha.
+  Entrada: Número da linha e coluna.
+  Saida: Matrix na tela com os valores preenchidos.
+  Autor: Rafael Florentino.
+*/
 package JogoDaVelha;
 import java.util.Scanner;
 

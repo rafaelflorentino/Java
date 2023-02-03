@@ -1,3 +1,9 @@
+/* 
+  Objetivo: Crie um programa em java trabalhe com exceções e com tru e catch
+  Entrada: Sem entrada.
+  Saida: Resultado, mensagem de sucesso ou de erro.
+  Autor: Rafael Florentino.
+*/
 import java.util.ArrayList;
 
 public class Exceptions {
