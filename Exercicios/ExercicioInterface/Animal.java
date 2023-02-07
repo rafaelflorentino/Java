@@ -100,4 +100,5 @@ abstract class Animal implements SerVivo{ // Classe abstrata não pode ser insta
         System.out.printf("Forca.: %s%n",this.forca);
         System.out.println("--------------------------");
     };
+   
 }

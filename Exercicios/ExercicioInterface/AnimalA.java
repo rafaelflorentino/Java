@@ -11,7 +11,7 @@ public class AnimalA implements SerVivo{
         System.out.printf("Tipo..: %s%n",getClass().toString());
         System.out.printf("OBS: Animal Generico %n");
         System.out.printf("Herda: SerVivo %n");
-        System.out.printf("Vivo: %s %n",this.vivo ? "Sim" : "Nao");
+        System.out.printf("Vivo: %s %n",vivo ? "Sim" : "Nao");
         System.out.printf("--------------------------%n");
     }
     

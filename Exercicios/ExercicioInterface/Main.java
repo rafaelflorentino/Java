@@ -3,7 +3,7 @@ package ExercicioInterface;
 public class Main {
     public static void main(String[] args) {
         AnimalA n1=new AnimalA();
-        //n1.info();
+        n1.info();
 
         Formiga f1= new Formiga(2, 2, 2);
         Sapo s1 = new Sapo(10, 10, 10);
