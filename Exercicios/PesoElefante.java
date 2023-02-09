@@ -1,4 +1,3 @@
-
 /* 
   Objetivo: Faça um programa que leia três valores numéricos referentes ao peso de elefantes (nunca menores que 5 quilos) 
   e os mostre em ordem crescente.
@@ -24,7 +23,7 @@ public class PesoElefante {
 				elefante[i] = entrada.nextInt();
 			}
 		}
-		// Ordenacao crescente do vetor
+		// Ordenação crescente do vetor
 		for (j = 0; j < 2; j++) {
 			for (i = 0; i < 2; i++) {
 				if (elefante[i] > elefante[i + 1]) {
