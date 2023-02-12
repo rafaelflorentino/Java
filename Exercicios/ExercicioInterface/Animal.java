@@ -4,8 +4,8 @@ abstract class Animal implements SerVivo{ // Classe abstrata não pode ser insta
 
     private Boolean vivo;
     private int massa;
-    private int x;
-    private int y;
+    private int x=0;
+    private int y=0;
     private int vel;
     private int forca;
 
@@ -17,7 +17,14 @@ abstract class Animal implements SerVivo{ // Classe abstrata não pode ser insta
         this.forca=forca;
         this.vel=vel;
     }
-
+    public Animal(int vel, int massa, int forca, int x, int y){
+        this.vivo=true;
+        this.massa=massa;
+        this.x=0;
+        this.y=0;
+        this.forca=forca;
+        this.vel=vel;
+    }
     public void setVivo(Boolean vivo){
         this.vivo=vivo;
     }
@@ -67,6 +74,14 @@ abstract class Animal implements SerVivo{ // Classe abstrata não pode ser insta
           }
         
     };
+    public int moverDirecao(int direita, int esquerda){
+        this.x=direita;
+        this.y=esquerda;
+        System.out.println("Moveu para Direita: "+direita+" Metros");
+        System.out.println("Moveu para Esquerda: "+esquerda+" Metros");
+        return this.x + this.y;
+    }
+
     public void comer(int massa){
         if(this.vivo){
             this.forca+=massa;

@@ -1,5 +1,5 @@
 package ExercicioInterface;
-
+//import java.io.Console;
 public class Main {
     public static void main(String[] args) {
         AnimalA n1=new AnimalA();
@@ -40,5 +40,13 @@ public class Main {
         System.out.printf("\nAranha esta: %s \n", (a1.getVivo() ? "Vivo(a)" : "Morto(a)"));
         
         //Animal n2=new Animal();// Classe abstrata nao pode ser intanciada só pode ser herdada 
+
+
+        Guepardo guepardo = new Guepardo(35, 40, 55, 30, 150);
+        guepardo.mover();
+        System.out.println("Guepardo andou no total: "+guepardo.moverDirecao(20,30)+" Metros.");
+
+        
+
     } 
 }
