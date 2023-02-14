@@ -1,4 +1,3 @@
-
 /* 
   Objetivo: Escreva um programa que recebe uma frase e mostra quantas vogais e consoantes tem na frase, no final mostre uma mensagem
   dizendo quantos A, E, I, O e U tem, e quantas consonates tem.
