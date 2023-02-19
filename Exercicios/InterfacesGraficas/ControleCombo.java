@@ -4,7 +4,7 @@
   Saida: Imagem selecionada.
   Autor: Rafael Florentino.
 */
-package Interfaces;
+package InterfacesGraficas;
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Font;

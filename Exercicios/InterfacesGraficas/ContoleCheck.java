@@ -4,7 +4,7 @@
   Saida: Texto.
   Autor: Rafael Florentino.
 */
-package Interfaces;
+package InterfacesGraficas;
 import java.awt.Container;
 import java.awt.FlowLayout;
 import java.awt.Font;

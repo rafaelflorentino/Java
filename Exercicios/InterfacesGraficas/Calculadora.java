@@ -1,4 +1,4 @@
-package Interfaces;
+package InterfacesGraficas;
 /* 
   Objetivo: Crie um programa em java com interface que pareça uma calculadora.
   Entrada: Sem entrada.
