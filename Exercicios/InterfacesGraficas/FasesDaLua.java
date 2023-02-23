@@ -1,5 +1,5 @@
 /* 
-  Objetivo: Crie um programa em java que  tenha um select com as fase da lua, e uma ingem ao centro
+  Objetivo: Crie um programa em java que  tenha um select com as fase da lua, e uma imagem ao centro.
   Entrada: Sem entrada.
   Saida: Imagem da fase da lua.
   Autor: Rafael Florentino.
