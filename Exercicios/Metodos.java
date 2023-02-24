@@ -1,8 +1,8 @@
 /* 
-  Objetivo: Crie um programa em java que através de metodos some 2 numeros inteiros, usando sobrecarga crie outro metodo que 
-  some dois numeros tipo double, crie um terceiro nmetodo que receba vario numeros e some eles.
+  Objetivo: Crie um programa em java que através de metodos some 2 numeros inteiros, usando sobrecarga crie outro método que 
+  some dois números tipo double, crie um terceiro método que receba vários números e some eles.
   Entrada: Sem entrada.
-  Saida: Soma interios, soma double, soma vario numeros.
+  Saida: Soma inteiros, soma double, soma vários números.
   Autor: Rafael Florentino.
 */
 public class Metodos {
@@ -43,4 +43,7 @@ public class Metodos {
             System.out.printf("\n%d | Texto Dentro do Metodo, Veio de fora do metodo: %s  %d",i+1,mensagem,repeticoes);
         }
     }
+
+     /* Assinatura do método: */ 
+    // calcularResposta(int, double, double) // CamelCase
 }

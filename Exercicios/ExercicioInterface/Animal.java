@@ -1,6 +1,6 @@
 package ExercicioInterface;
 
-abstract class Animal implements SerVivo{ // Classe abstrata não pode ser instanciada, só pode ser herdada
+abstract class Animal implements SerVivo{ // Classe abstrata não pode ser instânciada, só pode ser herdada
 
     private Boolean vivo;
     private int massa;
