@@ -8,8 +8,10 @@ public class Bicicleta {
     private int cadencia;
     private int marcha;
     private int velocidade;
+    private static int quantidade; // com static, quantidade pertence a classe Bicicleta e não as intâncias bike.
 
     public Bicicleta(int cadenciaInicial, int velocidadeInicial, int marchaInicial) {
+        quantidade++;
         marcha = marchaInicial;
         cadencia = cadenciaInicial;
         velocidade = velocidadeInicial;
@@ -17,6 +19,10 @@ public class Bicicleta {
 
     public Bicicleta() {
 
+    }
+
+    public static void getQuantidade(){
+       System.out.println("Quantidade de bicicletas intânciadas: "+quantidade);
     }
 
     public void info(){
@@ -72,5 +78,16 @@ public class Bicicleta {
         bike.setMarcha(1);
         bike.setCadencia(2);
         bike.info();
+        System.out.println(" ");
+
+        Bicicleta bike2 = new Bicicleta(1,1,1);
+        System.out.println(bike2.cadencia);
+        // bike2.quantidade não pode acessar quantidade e nem bike2.getQuantidade pois são static, so a classe acessa, intâncias não
+        System.out.println(" ");
+
+        System.out.println("Quantidade de bicicletas criadas: "+Bicicleta.quantidade);// Classe pode acessar variável quantidade static
+        Bicicleta.getQuantidade();// Classe pode acessar o método getQuantidade static
+
+
     }
 }

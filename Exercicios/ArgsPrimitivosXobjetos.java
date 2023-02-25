@@ -5,6 +5,10 @@
   Autor: Rafael Florentino.
 */
 public class ArgsPrimitivosXobjetos {
+    static final double PI = 3.141592653589793; // Constante da classe, com static (intâncias não acessam) // só classe acessa
+    final double PI2 = 3.141592653589793; // Constante sem static (intâncias podem acessar) // só instâncias acessa
+    final String NOME_DUPLO = "Maria Eduarda"; // sempre letras maiúsculas separdo por hifen // só instâncias acessa
+
     public static void main(String[] args) {
         // Metodos em Tipos primitivos não altera o valor da variável x
         int x = 10;
@@ -23,6 +27,15 @@ public class ArgsPrimitivosXobjetos {
 
         alterar(b); // Altera o valor de b dentro é fora do método
         System.out.println("b.getMarcha() depois da funcao: " + b.getMarcha());
+
+
+        // Acessando variável constante da classe
+        System.out.println(ArgsPrimitivosXobjetos.PI); // ArgsPrimitivosXobjetos não pode acessar PI2 pois PI2 não e static
+        System.out.println(PI);
+        ArgsPrimitivosXobjetos a = new ArgsPrimitivosXobjetos();
+        System.out.println(a.PI2); // a não pode acessar PI pois PI e static
+        System.out.println(a.NOME_DUPLO);  // já: System.out.println(NOME_DUPLO);  não funciona, não pode, nao é static      
+       
     }
 
     public static void incrementa(int v) {
