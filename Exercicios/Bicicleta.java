@@ -15,6 +15,10 @@ public class Bicicleta {
         velocidade = velocidadeInicial;
     }
 
+    public Bicicleta() {
+
+    }
+
     public void info(){
         System.out.println("Velocidade Atual: "+getVelocidade() );
         System.out.println("Marcha Atual: "+getMarcha() );

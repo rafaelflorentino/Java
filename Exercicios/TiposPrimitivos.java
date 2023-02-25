@@ -14,15 +14,15 @@ public class TiposPrimitivos {
 
         int num = 4; // int Tamanho: 4 bytes (32 bits) Valores: -2.147.483.648 até 2.147.483.647
         short num2 = 2; // short Tamanho: 2 bytes (16 bits) Valores: -32.768 até 32.767
-        byte num3 = 1; // short Tamanho: 1 bytes (8 bits) Valores: -128 até 127
-        long num4 = 8; // short Tamanho: 8 bytes (64 bits) Valores: -9.223.372.036.854.775.808 até 9.223.373.036.854.775.807
+        byte num3 = 1; // byte Tamanho: 1 bytes (8 bits) Valores: -128 até 127
+        long num4 = 8; // long Tamanho: 8 bytes (64 bits) Valores: -9.223.372.036.854.775.808 até 9.223.373.036.854.775.807
         System.out.println("Int: " + num + " Short: " + num2 + " Byte: " + num3 + " Long: " + num4);
 
         /* Dados Primitivos De Ponto Flutuante */
 
-        float num5 = 4; // short Tamanho: 4 bytes (32 bits) Valores: +/- 3.40282347E+38F (aproximandamente 7 dígitos significativos)
+        float num5 = 4; // float Tamanho: 4 bytes (32 bits) Valores: +/- 3.40282347E+38F (aproximandamente 7 dígitos significativos)
         // Números do tipo float aparece com um sufixo F no final: 3.04F (se não tiver o F é considerado um double)
-        double num6 = 8; // short Tamanho: 8 bytes (64 bits) Valores: +/- 1.79769313486231570E+308 (15 dígitos significativos)                 
+        double num6 = 8; // double Tamanho: 8 bytes (64 bits) Valores: +/- 1.79769313486231570E+308 (15 dígitos significativos)                 
         System.out.println("Float: " + num5 + " Double: " + num6);
 
         /* Dado Primitivo Caractere */
