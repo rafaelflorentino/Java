@@ -1,5 +1,13 @@
+/* 
+  Objetivo: Crie um programa em java que utilize annotation e interfaces
+  Entrada: Sem entrada.
+  Saida: Mensagem Contendo a área do figura geomêtrica .
+  Autor: Rafael Florentino.
+*/
+
 package AnnotationEinterface;
-@Autor( // Annotation com parametros
+
+@Autor( // Annotation com parâmetros
     nome = "Benjamin Franklin",
     data = "3/27/2003"
 )
