@@ -1,7 +1,7 @@
 /* 
   Objetivo: Crie um programa em java que realize uma pesquisa sobre saúde e esportes, registre os dados e calcule o imc 
   da pessoa, ao final apesente na tela o resultado da pesquisa
-  Entrada: Dados do usuario.
+  Entrada: Dados do usuário.
   Saida: Resultado da pesquisa.
   Autor: Rafael Florentino.
 */
