@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 /* 
   Objetivo: Crie um programa em java que crie uma fila.
   Entrada: Sem entrada.
@@ -16,6 +19,17 @@ public class FilaQueue {
     // peek() - Pega o elemento na frente da fila sem removê-lo;
     // isfull() - Verifica se a fila está cheia;
     // isempty() - Verifica se a fila está vazia;  
+    public static void main(String[] args) {
+        // entra por um lado e sai pelo outro lado
+        Queue<String> q = new LinkedList<>(); // quem chega primeiro sai primeiro
+        q.add("d");
+        q.add("b");
+        q.add("c");
+        q.add("a");
+        while(q.size() > 0) {
+            System.out.println(q.remove()); // Remove da fila
+        }        
+    }
     
     /*
         // Traz o primeiro elemento a fila
