@@ -4,7 +4,6 @@
   Saida:  Mensagem de Olá.
   Autor: Rafael Florentino.
 */
-
 abstract class Pessoa { // classe abstrata
     abstract void saudar();
 }
