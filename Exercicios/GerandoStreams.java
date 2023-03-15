@@ -21,6 +21,7 @@ public class GerandoStreams {
         array.add("abcd");
         array.add("");
         array.add("jkl");
+        array.add("");
         
         List<String> strings = array;
         List<String> filtrado = strings.stream()
@@ -64,7 +65,7 @@ public class GerandoStreams {
             .forEach(System.out::println);   
         System.out.println("\n");  
 
-        //Parallel
+        // Parallel
         num.parallelStream()
         .forEach(System.out::println); // Divide tarefa em treads diferentes   
         System.out.println("\n"); 
