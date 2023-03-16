@@ -6,7 +6,7 @@ package JavaDoc;
 * argument is a specifier that is relative to the url argument.
 * <p>
 * This method always returns immediately, whether or not the
-* image exists. ...
+*
 * @version 1.3
 * @since 1.0
 * @author Rafael Florentino
