@@ -18,7 +18,7 @@ package JavaDoc;
 
 public class JavadocTeste {
     /**
-     * Armazena valor
+     * Armazena valor javadoc
      * @param valor
      * @throws InterruptedException
      */
