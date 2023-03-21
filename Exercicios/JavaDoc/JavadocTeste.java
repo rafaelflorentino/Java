@@ -21,7 +21,7 @@ public class JavadocTeste {
      * Armazena valor javadoc
      * @param valor
      * @throws InterruptedException
-     */
+     */ 
 
     /**
      * Recupera valor
