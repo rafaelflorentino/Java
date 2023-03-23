@@ -104,7 +104,16 @@ public class GerandoStreams {
         (a, b) -> a + b);  // acumulador acumula os valores e soma     
        
        */
+       System.out.println("\n"+  somaStream(num));
+      
 
+    }
+
+    private static int somaStream(List<Integer> list) {
+        return list.stream()
+        .filter(num -> num % 2 == 0)
+        .mapToInt(Integer::intValue)
+        .sum();
     }
     
 }
