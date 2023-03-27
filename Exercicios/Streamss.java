@@ -1,7 +1,7 @@
 /* 
-  Objetivo: Crie um programa que use map, filter collect
+  Objetivo: Crie um programa que use map, filter collect.
   Entrada: Sem entrada.
-  Saida:  Impreção dos dados na tela.
+  Saida:  impressão dos dados na tela.
   Autor: Rafael Florentino.
 */
 import java.util.ArrayList;

@@ -1,7 +1,7 @@
 /* 
   Objetivo: Crie um programa que use expressoes laambda
   Entrada: Sem entrada.
-  Saida:  Impreção dos dados na tela.
+  Saida:  impressão dos dados na tela.
   Autor: Rafael Florentino.
 */
 import java.util.function.Consumer;
