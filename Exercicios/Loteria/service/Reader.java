@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Reader {
 
 	
-	//############################## INT ###############################################
+	//############################## INT  ###############################################
 	
 	public static int lerInt(){
 		return new Scanner(System.in).nextInt();
