@@ -1,5 +1,5 @@
 package Loteria.modelo.bean;
-
+// Numero loteria
 public class NumeroLoteria {
 
 	private int number;
