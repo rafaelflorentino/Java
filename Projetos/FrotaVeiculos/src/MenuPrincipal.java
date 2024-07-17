@@ -1,33 +1,31 @@
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
+//import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
+//import javax.swing.JTextField;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MenuPrincipal extends JFrame {
+
+    static List<Veiculo> listaVeiculos = new ArrayList<>();
+
     public MenuPrincipal() {
 
         // Tela Frame configurações
 
         setTitle("Gerenciador de Frota");
         setVisible(true);
-        setSize(800, 500);
+        setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
         setLocationRelativeTo(null);
         setLayout(null);
 
-        // Criando e adicionando texto ao menu
-
-        JLabel textoMenu = new JLabel("Selecione a opção desejada");
-        textoMenu.setBounds(300, 0, 250, 70);
-        textoMenu.setFont(new Font("SansSerif", Font.ITALIC, 15));
-
-        add(textoMenu);
 
         // Criando e configurando os botões
  
@@ -55,23 +53,36 @@ public class MenuPrincipal extends JFrame {
         jButtonListarDespesas.setBackground(new Color(10, 10, 10));
         jButtonListarDespesas.setForeground(Color.WHITE);
 
+        JButton jButtonsair = new JButton("5 - Sair");
+        jButtonsair.setBounds(280, 450, 250, 70); 
+        jButtonsair.setFont(new Font("SansSerif", Font.BOLD, 15));
+        jButtonsair.setBackground(new Color(10, 10, 10));
+        jButtonsair.setForeground(Color.WHITE);
+
         add(jButtonCadastrarVeiculos);
         add(jButtonListarVeiculos);
         add(jButtonRegistrarDespesas);
         add(jButtonListarDespesas);
+        add(jButtonsair);
 
         jButtonCadastrarVeiculos.addActionListener(this::cadastrarVeiculo);
         jButtonListarVeiculos.addActionListener(this::listarVeiculo);
         jButtonRegistrarDespesas.addActionListener(this::registrarDespesa);
         jButtonListarDespesas.addActionListener(this::listarDespesa);
+        jButtonsair.addActionListener(this::sair);
     }
 
     public void cadastrarVeiculo(ActionEvent actionEvent) {
-        JOptionPane.showMessageDialog(null," Cadastre um Veículo", "Cadastrar Veículos",JOptionPane.INFORMATION_MESSAGE);
+        //JOptionPane.showMessageDialog(null," Cadastre um Veículo", "Cadastrar Veículos",JOptionPane.INFORMATION_MESSAGE);
+        new TelaCadastrarVeiculo();
+        dispose(); 
+    
     }
 
     private void listarVeiculo(ActionEvent actionEvent){
-        JOptionPane.showMessageDialog(null," Lista de Veículos", "Listar Veículos",JOptionPane.WARNING_MESSAGE);
+        new TelaListaVeiculos(listaVeiculos);
+        dispose(); 
+        //JOptionPane.showMessageDialog(null," Lista de Veículos", "Listar Veículos",JOptionPane.WARNING_MESSAGE);
     }
 
     private void registrarDespesa(ActionEvent actionEvent){
@@ -82,6 +93,8 @@ public class MenuPrincipal extends JFrame {
         JOptionPane.showMessageDialog(null," Lista das despesas", "Listar Despesas",JOptionPane.WARNING_MESSAGE);
     }
 
-
+    private void sair(ActionEvent actionEvent){
+        dispose(); 
+    }
 
 }

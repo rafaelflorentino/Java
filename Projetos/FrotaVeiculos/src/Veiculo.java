@@ -4,13 +4,13 @@ public class Veiculo {
     private int anoFabricacao;
     private int anoModelo;
     private String motorizacao;
-    private int capacidadeTanque;
+    private double capacidadeTanque;
     private String cor;
     private String placa; 
-    private int renavam;
+    private String renavam;
 
     public Veiculo(String marca, String modelo, int anoFabricacao, int anoModelo, String motorizacao,
-        int capacidadeTanque, String cor, String placa, int renavam) {
+        double capacidadeTanque, String cor, String placa, String renavam) {
         setMarca(marca);
         setModelo(modelo);
         setAnoFabricacao(anoFabricacao);
@@ -59,11 +59,11 @@ public class Veiculo {
     public void setMotorizacao(String motorizacao) {
         this.motorizacao = motorizacao;
     }
-    public int getCapacidadeTanque() {
+    public double getCapacidadeTanque() {
         return capacidadeTanque;
     }
-    public void setCapacidadeTanque(int capacidadeTanque) {
-        this.capacidadeTanque = capacidadeTanque;
+    public void setCapacidadeTanque(double capacidadeTanque2) {
+        this.capacidadeTanque = capacidadeTanque2;
     }
     public String getCor() {
         return cor;
@@ -77,10 +77,10 @@ public class Veiculo {
     public void setPlaca(String placa) {
         this.placa = placa;
     }
-    public int getRenavam() {
+    public String getRenavam() {
         return renavam;
     }
-    public void setRenavam(int renavam) {
+    public void setRenavam(String renavam) {
         this.renavam = renavam;
     } 
 
