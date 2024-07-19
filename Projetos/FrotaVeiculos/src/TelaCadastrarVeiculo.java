@@ -138,6 +138,7 @@ public class TelaCadastrarVeiculo extends JFrame {
     inputRenavam.setBounds(250, 500, 250, 35);
     inputRenavam.setFont(new Font("SansSerif", Font.ITALIC, 15));
     add(inputRenavam);
+
     // Botão Cadastrar Veiculo
 
     JButton buttonCadastrarVeiculo = new JButton("Cadastrar");
@@ -145,7 +146,9 @@ public class TelaCadastrarVeiculo extends JFrame {
     buttonCadastrarVeiculo.setFont(new Font("SansSerif", Font.BOLD, 15));
     buttonCadastrarVeiculo.setBackground(new Color(10, 10, 10));
     buttonCadastrarVeiculo.setForeground(Color.WHITE);
+    buttonCadastrarVeiculo.setFocusable(false);
     add(buttonCadastrarVeiculo);
+    
 
     // Botão Voltar
 
@@ -154,6 +157,7 @@ public class TelaCadastrarVeiculo extends JFrame {
     buttonVoltar.setFont(new Font("SansSerif", Font.BOLD, 15));
     buttonVoltar.setBackground(new Color(10, 10, 10));
     buttonVoltar.setForeground(Color.WHITE);
+    buttonVoltar.setFocusable(false);
     add(buttonVoltar);
 
 
@@ -181,8 +185,8 @@ public class TelaCadastrarVeiculo extends JFrame {
             JOptionPane.showMessageDialog(null, "Preencha os campos corretamente", "Informação", 0);
         }else{
             // Verificar se entrou números nos inputs int
-            if (!inputAnoFabricacao.getText().matches("\\d+") || !inputAnoModelo.getText().matches("\\d+") || !inputRenavam.getText().matches("\\d+")) {
-                JOptionPane.showMessageDialog(null, "Os campos Ano de Fabricação, Ano do Modelo e Renavam devem conter apenas números.", "Erro", JOptionPane.ERROR_MESSAGE);
+            if (!inputAnoFabricacao.getText().matches("\\d+") || !inputAnoModelo.getText().matches("\\d+") || !inputCapacidadeTanque.getText().matches("\\d+")) {
+                JOptionPane.showMessageDialog(null, "Os campos Ano de Fabricação, Ano do Modelo e Capacidade Tanque devem conter apenas números.", "Erro", JOptionPane.ERROR_MESSAGE);
                 return; 
             }            
 

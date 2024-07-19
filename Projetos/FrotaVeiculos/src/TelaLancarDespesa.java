@@ -2,6 +2,7 @@
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
@@ -21,6 +22,7 @@ public class TelaLancarDespesa extends JFrame  {
         setResizable(false);
         setLocationRelativeTo(null);
         setLayout(new GridLayout(9, 1));
+
 
         //  Nome Despesa
 
@@ -61,6 +63,16 @@ public class TelaLancarDespesa extends JFrame  {
         inputDescricaoDespesa  = new JTextField("");
         inputDescricaoDespesa .setBounds(250, 100, 250, 35);
         inputDescricaoDespesa .setFont(new Font("SansSerif", Font.ITALIC, 15));
+
+        // Botão Cadastrar
+
+        JButton buttonCadastrarVeiculo = new JButton("Cadastrar");
+        buttonCadastrarVeiculo.setBounds(50, 600, 250, 70); 
+        buttonCadastrarVeiculo.setFont(new Font("SansSerif", Font.BOLD, 15));
+        buttonCadastrarVeiculo.setBackground(new Color(10, 10, 10));
+        buttonCadastrarVeiculo.setForeground(Color.WHITE);
+        buttonCadastrarVeiculo.setFocusable(false);
+
         
         // Botão Voltar
 
@@ -70,10 +82,12 @@ public class TelaLancarDespesa extends JFrame  {
         jButtonVoltar.setFont(new Font("SansSerif", Font.BOLD, 15));
         jButtonVoltar.setBackground(new Color(10, 10, 10));
         jButtonVoltar.setForeground(Color.WHITE);
-
+        jButtonVoltar.setFocusable(false);
+        
+        buttonCadastrarVeiculo.addActionListener(this::cadastrarDespesa);
         jButtonVoltar.addActionListener(this::voltar);
-        setVisible(true);
-
+        
+        painelBotao.add(buttonCadastrarVeiculo);
         painelBotao.add(jButtonVoltar);
 
         add(TextoNomeDespesa);
@@ -87,6 +101,35 @@ public class TelaLancarDespesa extends JFrame  {
         add(painelBotao);
 
     }
+
+        public void cadastrarDespesa(ActionEvent actionEvent) {
+
+        if(  
+            inputNomeDespesa.getText().isEmpty() || inputValorDespesa.getText().isEmpty() || 
+            inputPlacaDespesa.getText().isEmpty() || inputDescricaoDespesa.getText().isEmpty() 
+        ){
+            JOptionPane.showMessageDialog(null, "Preencha os campos corretamente", "Informação", 0);
+        }else{
+            
+            if (!inputValorDespesa.getText().matches("\\d+")) {
+                JOptionPane.showMessageDialog(null, "Os campos Valor deve conter apenas números.", "Erro", JOptionPane.ERROR_MESSAGE);
+                return; 
+            }            
+            
+            Despesa novaDespesa = new Despesa(
+                inputNomeDespesa.getText(),
+                Float.parseFloat(inputValorDespesa.getText()), 
+                inputPlacaDespesa.getText(),
+                inputDescricaoDespesa.getText()
+            );
+            MenuPrincipal.listaDespesas.add(novaDespesa);
+
+            JOptionPane.showMessageDialog(null,novaDespesa, "Despesa cadastrada com sucesso \nDados Despesa:",JOptionPane.INFORMATION_MESSAGE);
+            new MenuPrincipal();
+            dispose(); 
+        }
+
+    }   
     
     public void voltar(ActionEvent actionEvent) {
         new MenuPrincipal();

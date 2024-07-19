@@ -19,11 +19,23 @@ public class TelaListaVeiculos extends JFrame {
 
         // Titulo da Tela
 
-        JLabel headerLabel = new JLabel("Lista de Veículos Cadastrados");
-        headerLabel.setFont(new Font("SansSerif", Font.BOLD, 18));
-        headerLabel.setForeground(Color.BLUE);
-        headerLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        panel.add(headerLabel);
+        if(MenuPrincipal.listaVeiculos.isEmpty()){
+
+            JLabel headerLabel = new JLabel("Nenhum Veículos Cadastrado");
+            headerLabel.setFont(new Font("SansSerif", Font.BOLD, 18));
+            headerLabel.setForeground(Color.BLUE);
+            headerLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            panel.add(headerLabel);
+
+        }else{
+            JLabel headerLabel = new JLabel("Lista de Veículos Cadastrados");
+            headerLabel.setFont(new Font("SansSerif", Font.BOLD, 18));
+            headerLabel.setForeground(Color.BLUE);
+            headerLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            panel.add(headerLabel);
+        }
+
+
 
         // Lista todos os veiculos cadastrados
 
@@ -43,6 +55,7 @@ public class TelaListaVeiculos extends JFrame {
         buttonVoltar.setForeground(Color.WHITE);
         buttonVoltar.setHorizontalAlignment(SwingConstants.CENTER);
         buttonVoltar.addActionListener(this::voltar); 
+        buttonVoltar.setFocusable(false);
         Border border = BorderFactory.createLineBorder(Color.green,3);
         buttonVoltar.setBorder(border);
 

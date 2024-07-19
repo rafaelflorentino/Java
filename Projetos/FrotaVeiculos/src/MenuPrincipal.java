@@ -15,6 +15,7 @@ import java.util.List;
 public class MenuPrincipal extends JFrame {
 
     static List<Veiculo> listaVeiculos = new ArrayList<>();
+    static List<Despesa> listaDespesas = new ArrayList<>();
 
     public MenuPrincipal() {
 
@@ -51,6 +52,7 @@ public class MenuPrincipal extends JFrame {
         jButtonCadastrarVeiculos.setBackground(new Color(10, 10, 10));
         jButtonCadastrarVeiculos.setForeground(Color.WHITE);
         jButtonCadastrarVeiculos.setBorder(border);
+        jButtonCadastrarVeiculos.setFocusable(false);
 
         JButton jButtonListarVeiculos = new JButton("2 - Listar Veiculos");
         jButtonListarVeiculos.setBounds(280, 150, 250, 70); 
@@ -58,6 +60,7 @@ public class MenuPrincipal extends JFrame {
         jButtonListarVeiculos.setBackground(new Color(10, 10, 10));
         jButtonListarVeiculos.setForeground(Color.WHITE);
         jButtonListarVeiculos.setBorder(border);
+        jButtonListarVeiculos.setFocusable(false);
 
         JButton jButtonRegistrarDespesas = new JButton("3 - Registrar Despesas");
         jButtonRegistrarDespesas.setBounds(280, 250, 250, 70); 
@@ -65,6 +68,7 @@ public class MenuPrincipal extends JFrame {
         jButtonRegistrarDespesas.setBackground(new Color(10, 10, 10));
         jButtonRegistrarDespesas.setForeground(Color.WHITE);
         jButtonRegistrarDespesas.setBorder(border);
+        jButtonRegistrarDespesas.setFocusable(false);
 
         JButton jButtonListarDespesas = new JButton("4 - Listar Despesas");
         jButtonListarDespesas.setBounds(280, 350, 250, 70); 
@@ -72,6 +76,7 @@ public class MenuPrincipal extends JFrame {
         jButtonListarDespesas.setBackground(new Color(10, 10, 10));
         jButtonListarDespesas.setForeground(Color.WHITE);
         jButtonListarDespesas.setBorder(border);
+        jButtonListarDespesas.setFocusable(false);
 
         JButton jButtonsair = new JButton("5 - Sair");
         jButtonsair.setBounds(280, 450, 250, 70); 
@@ -79,6 +84,7 @@ public class MenuPrincipal extends JFrame {
         jButtonsair.setBackground(new Color(10, 10, 10));
         jButtonsair.setForeground(Color.WHITE);
         jButtonsair.setBorder(border);
+        jButtonsair.setFocusable(false);
 
         panel.add(jButtonCadastrarVeiculos);
         panel.add(jButtonListarVeiculos);
