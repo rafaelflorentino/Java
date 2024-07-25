@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Veiculo {
     private String marca;
     private String modelo; 
@@ -9,6 +12,7 @@ public class Veiculo {
     private String cor;
     private String placa; 
     private String renavam;
+    List<Abastecimento> abastecimentos;
 
 
     public Veiculo(String marca, String modelo, int anoFabricacao, int anoModelo, double motorizacao,
@@ -23,6 +27,7 @@ public class Veiculo {
         setCor(cor);
         setPlaca(placa);
         setRenavam(renavam);
+        setAbastecimentos(new ArrayList<>());
     }
 
     @Override
@@ -30,6 +35,30 @@ public class Veiculo {
         return "Dados Veiculo [\nmarca = " + getMarca() + ", \nmodelo = " + getModelo() + ", \nanoFabricacao = " + getAnoFabricacao() + ", \nanoModelo = "
                 + getAnoModelo() + ", \nmotorizacao = " + getMotorizacao() + ", \ncapacidadeTanque = " + getCapacidadeTanque() + ", \ntipoCombustivel = " + getTipoCombustivel() + ", \ncor = " + getCor()
                 + ", \nplaca = " + getPlaca() + ", \nrenavam = " + getRenavam() + "]";
+    }
+
+    public void registrarAbastecimento(double valorAbastecido, double quantidadeCombustivel, double quilometragem) {
+        Abastecimento abastecimento = new Abastecimento(valorAbastecido, quantidadeCombustivel, quilometragem);
+        this.abastecimentos.add(abastecimento);
+    }
+
+    public double calcularConsumoMedio() {
+        if (abastecimentos.size() < 2) {
+            return 0; // Não há dados suficientes para calcular o consumo médio
+        }
+
+        double totalQuilometros = 0;
+        double totalCombustivel = 0;
+
+        for (int i = 1; i < abastecimentos.size(); i++) {
+            Abastecimento anterior = abastecimentos.get(i - 1);
+            Abastecimento atual = abastecimentos.get(i);
+
+            totalQuilometros += atual.quilometragem - anterior.quilometragem;
+            totalCombustivel += atual.quantidadeCombustivel;
+        }
+
+        return totalQuilometros / totalCombustivel;
     }
 
     public String getMarca() {
@@ -93,6 +122,14 @@ public class Veiculo {
 
     public void setTipoCombustivel(String tipoCombustivel) {
         this.tipoCombustivel = tipoCombustivel;
+    }
+
+    public List<Abastecimento> getAbastecimentos() {
+        return abastecimentos;
+    }
+
+    public void setAbastecimentos(List<Abastecimento> abastecimentos) {
+        this.abastecimentos = abastecimentos;
     } 
 
     

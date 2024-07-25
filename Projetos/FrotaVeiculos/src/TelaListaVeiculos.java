@@ -18,11 +18,10 @@ public class TelaListaVeiculos extends JFrame {
       setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
       setVisible(true);
 
-        // Primeira linha: texto "Veículos Cadastrados"
         JLabel labelTitulo = new JLabel("Veículos Cadastrados", SwingConstants.CENTER);
         add(labelTitulo);
 
-        // Segunda linha: nome veiculo, placa e 3 botões  
+    
         if(MenuPrincipal.listaVeiculos.isEmpty()){
 
             JLabel headerLabel = new JLabel("Nenhum Veículos Cadastrado");
@@ -64,6 +63,8 @@ public class TelaListaVeiculos extends JFrame {
                 buttonAbastecer.addActionListener(this::voltar); 
                 buttonAbastecer.setFocusable(false);
                 buttonAbastecer.setBorder(border);
+                //buttonAbastecer.addActionListener(this::abastecer);
+                buttonAbastecer.addActionListener(e -> abastecer(veiculo));
 
                 panelMeio.add(veiculoLabel);
                 panelMeio.add(buttonDespesas);
@@ -73,14 +74,14 @@ public class TelaListaVeiculos extends JFrame {
                 add(panelMeio);
                 pack();
 
-                // Define a largura para 600 e mantém a altura ajustada dinamicamente
+               
                 Dimension size = getSize();
                 size.width = 600;
                 setSize(size);        
             }
 
     }
-      // Terceira linha: botão "Voltar"
+    
       JButton buttonVoltar = new JButton("Voltar");
       buttonVoltar.setBounds(350, 600, 250, 70); 
       buttonVoltar.setFont(new Font("SansSerif", Font.BOLD, 15));
@@ -99,6 +100,11 @@ public void voltar(ActionEvent actionEvent) {
     new MenuPrincipal();
     dispose(); 
 } 
+
+public void abastecer(Veiculo veiculo) {
+    new TelaRegistrarAbastecimento(veiculo);
+    dispose();
+}
 
 
 
